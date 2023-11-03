@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
           });
         }
+      })
+      .catch(error =>{
+        alert("algo salió mal...");
       });
   });
 
@@ -53,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => response.json())
       .then(async (responseData) => {
-        // After successfully posting data, make a GET request to fetch all data
         const getResponse = await fetch(url);
         const allData = await getResponse.json();
         results.innerText = "";
@@ -65,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     LASTNAME = ${user.lastname}
                 `;
         });
+      })
+      .catch(error =>{
+        alert("algo salió mal...");
       });
   });
 
@@ -89,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 
       .catch((error) => {
+        alert("algo salió mal...");
         console.log("Hubo un error en la solicitud: ", error);
       });
   });
@@ -119,6 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
                       LASTNAME = ${user.lastname}
                   `;
         });
+      })
+      .catch(error =>{
+        alert("algo salió mal...");
       });
   });
 });
